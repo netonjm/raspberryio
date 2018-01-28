@@ -7,7 +7,7 @@ This library enables developers to use the various Raspberry Pi's hardware modul
     <Copyright>Unosquare (c) 2016-2017</Copyright>
     <AssemblyTitle>Unosquare Raspberry IO</AssemblyTitle>
     <VersionPrefix>0.13.0</VersionPrefix>
-    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Unosquare.RaspberryIO</AssemblyName>
     <PackageId>Unosquare.Raspberry.IO</PackageId>
@@ -18,6 +18,8 @@ This library enables developers to use the various Raspberry Pi's hardware modul
     <PackageProjectUrl>https://github.com/unosquare/raspberryio</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/unosquare/raspberryio/master/LICENSE</PackageLicenseUrl>
     <PackageTags>Raspberry Pi GPIO Camera SPI I2C Embedded IoT Mono C# .NET</PackageTags>
+    <ReleaseVersion>0.41</ReleaseVersion>
+    <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,13 +27,12 @@ This library enables developers to use the various Raspberry Pi's hardware modul
   </ItemGroup>
 
   <ItemGroup>
+        <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
     <PackageReference Include="Unosquare.Swan" Version="0.18.0" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
+    
 
 </Project>
