@@ -59,7 +59,7 @@
         /// especially if using threads.
         /// </summary>
         /// <param name="value">The value.</param>
-        public void SleepMicroseconds(uint value)
+        public static void SleepMicroseconds(uint value)
         {
             WiringPi.delayMicroseconds(value);
         }
@@ -73,7 +73,7 @@
         /// (as long as no other programs are running with elevated priorities)
         /// </summary>
         /// <param name="priority">The priority.</param>
-        public void SetThreadPriority(int priority)
+        public static void SetThreadPriority(int priority)
         {
             priority = priority.Clamp(0, 99);
             var result = WiringPi.piHiPri(priority);
